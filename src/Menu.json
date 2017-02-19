@@ -1,7 +1,8 @@
 {
-    "name": "Settings",
-    "item": {
-        "text": "Settings",
-        "route": "laralum::settings.index"
-    }
+    "items": [
+        {
+            "text": "Application Settings",
+            "route": "laralum::settings.index"
+        }
+    ]
 }
