@@ -38,6 +38,10 @@ class SettingsController extends Controller
      */
     public function update(Request $request)
     {
+        $this->validate($request, [
+            'appname' => 'required',
+        ]);
+
         Settings::first()->update([
             'appname'   => $request->input('appname'),
         ]);

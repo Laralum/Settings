@@ -1,21 +1,27 @@
 @php
     $settings = Laralum\Settings\Models\Settings::first();
 @endphp
-<div class="row">
-    <div class="col-md-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
-        <form action="{{ route('laralum::settings.general.update') }}" method="POST">
-            {!! csrf_field() !!}
+<div uk-grid>
+    <div class="uk-width-1-1@s uk-width-1-5@l"></div>
+    <div class="uk-width-1-1@s uk-width-3-5@l">
+        <form method="POST" action="{{ route('laralum::settings.general.update') }}">
+            {{ csrf_field() }}
+            <fieldset class="uk-fieldset">
 
-            <div class="form-group">
-                <label for="appname" id="content-name">@lang('laralum_settings::general.appname')</label>
-                <input type="text" id="appname" value="{{ $settings->appname }}" name="appname" placeholder="@lang('laralum_settings::general.appname_ph')" class="form-control">
-                <small id="content-desc" class="form-text text-muted">
-                    @lang('laralum_settings::general.appname_hp')
-                </small>
-            </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label">@lang('laralum_settings::general.appname')</label>
+                    <input value="{{ old('appname', $settings->appname ? $settings->appname : '') }}" name="appname" class="uk-input" type="text" placeholder="@lang('laralum_settings::general.appname_ph')">
+                    <small class="uk-text-meta">@lang('laralum_settings::general.appname_hp')</small>
+                </div>
 
-            <br />
-            <button type="submit" class="btn btn-success float-right clickable">@lang('laralum_settings::general.save')</button>
+                <div class="uk-margin">
+                    <button type="submit" class="uk-button uk-button-primary">
+                        <span class="ion-forward"></span>&nbsp; @lang('laralum_settings::general.save')
+                    </button>
+                </div>
+
+            </fieldset>
         </form>
     </div>
+    <div class="uk-width-1-1@s uk-width-1-5@l"></div>
 </div>

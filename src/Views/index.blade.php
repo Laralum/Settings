@@ -1,34 +1,47 @@
 @extends('laralum::layouts.master')
-@section('icon', 'mdi-settings')
+@section('icon', 'ion-settings')
 @section('title', __('laralum_settings::general.title'))
 @section('subtitle', __('laralum_settings::general.subtitle'))
+@section('breadcrumb')
+    <ul class="uk-breadcrumb">
+        <li><a href="{{ route('laralum::index') }}">@lang('laralum_settings::general.home')</a></li>
+        <li><span href="">@lang('laralum_settings::general.title')</span></li>
+    </ul>
+@endsection
 @section('content')
     @php
         $p = isset($_GET['p']) ? $_GET['p'] : 'Settings';
     @endphp
-    <div class="row">
-        <div class="col col-md-12">
-            <div class="card shadow">
-                <div class="card-header">
-                    @lang('laralum_settings::general.modules_settings')
-                </div>
-                <div class="card-block">
-                    <ul class="nav nav-tabs">
-                        @foreach($packages as $package => $view)
-                            <li class="nav-item">
-                                <a class="nav-link @if($package == $p) active @endif" data-toggle="tab" href="#{{ $package }}" role="tab" aria-controls="{{ $package }}">
-                                    {{ $package }}
-                                </a>
-                            </li>
-                        @endforeach
-                    </ul>
-                    <br />
-                    <div class="tab-content">
-                        @foreach($packages as $package => $view)
-                            <div class="tab-pane fade @if($package == $p) show active @endif" id="{{ $package }}" role="tabpanel">
-                                {!! $view !!}
+    <div class="uk-container uk-container-large">
+        <div uk-grid>
+            <div class="uk-width-1-1">
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-header">
+                        @lang('laralum_settings::general.modules_settings')
+                    </div>
+                    <div class="uk-card-body">
+                        <div uk-grid>
+                            <div class="uk-width-1-1@s uk-width-2-5@m uk-width-1-5@l">
+                                <ul class="uk-tab-left" uk-tab="connect: #settings-content">
+                                    @foreach($packages as $package => $view)
+                                        <li class="@if($package == $p) uk-active @endif">
+                                            <a href="#{{ $package }}">
+                                                {{ $package }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
                             </div>
-                        @endforeach
+                            <div class="uk-width-1-1@s uk-width-3-5@m uk-width-4-5@l">
+                                <ul id="settings-content" class="uk-switcher">
+                                    @foreach($packages as $package => $view)
+                                        <li>
+                                            {!! $view !!}
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

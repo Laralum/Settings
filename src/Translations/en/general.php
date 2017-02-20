@@ -8,7 +8,8 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'title'             => 'Settings',
+    'title'             => 'Application Settings',
+    'home'              => 'Home',
     'subtitle'          => 'Edit the settings of all the modules in one place',
     'modules_settings'  => 'All available settings',
     'save'              => 'Save Settings',
