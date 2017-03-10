@@ -28,7 +28,8 @@ class Settings extends Facade
     public static function get($package)
     {
         $dir = __DIR__.'/../../'.$package.'/src';
-        $files = scandir($dir);
+        $files = is_dir($dir) ? scandir($dir) : [];
+        
         foreach ($files as $file) {
             if ($file == 'Settings.json') {
                 $file_r = file_get_contents($dir . '/' . $file);
