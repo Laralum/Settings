@@ -40,10 +40,16 @@ class SettingsController extends Controller
     {
         $this->validate($request, [
             'appname' => 'required',
+            'description' => 'required',
+            'keywords' => 'required',
+            'author' => 'required',
         ]);
 
         Settings::first()->update([
-            'appname'   => $request->input('appname'),
+            'appname'   => $request->appname,
+            'description'   => $request->description,
+            'keywords'   => $request->keywords,
+            'author'   => $request->author,
         ]);
 
         return redirect()->route('laralum::settings.index', ['p' => 'Settings'])->with('success', __('laralum_settings::general.updated_settings'));

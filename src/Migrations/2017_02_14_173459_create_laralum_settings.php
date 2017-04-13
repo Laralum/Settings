@@ -17,11 +17,17 @@ class CreateLaralumSettings extends Migration
         Schema::create('laralum_settings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('appname');
+            $table->string('description');
+            $table->string('keywords');
+            $table->string('author');
             $table->timestamps();
         });
 
         Settings::create([
             'appname' => 'Laralum',
+            'description' => 'The modular laravel administration panel',
+            'keywords' => 'Laralum,Admin,Panel,CMS,Laravel,Modern,Developers',
+            'author' => 'Erik Campobadal, Aitor Riba',
         ]);
     }
 

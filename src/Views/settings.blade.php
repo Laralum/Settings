@@ -16,6 +16,30 @@
                     </div>
                 </div>
 
+                <div class="uk-margin">
+                    <label class="uk-form-label">@lang('laralum_settings::general.description')</label>
+                    <div class="uk-form-controls">
+                        <input value="{{ old('description', $settings->description ? $settings->description : '') }}" name="description" class="uk-input" type="text" placeholder="@lang('laralum_settings::general.description_ph')">
+                        <small class="uk-text-meta">@lang('laralum_settings::general.description_hp')</small>
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                    <label class="uk-form-label">@lang('laralum_settings::general.keywords')</label>
+                    <div class="uk-form-controls">
+                        <input value="{{ old('keywords', $settings->keywords ? $settings->keywords : '') }}" name="keywords" class="uk-input" type="text" placeholder="@lang('laralum_settings::general.keywords_ph')">
+                        <small class="uk-text-meta">@lang('laralum_settings::general.keywords_hp')</small>
+                    </div>
+                </div>
+
+                <div class="uk-margin">
+                    <label class="uk-form-label">@lang('laralum_settings::general.author')</label>
+                    <div class="uk-form-controls">
+                        <input value="{{ old('author', $settings->author ? $settings->author : '') }}" name="author" class="uk-input" type="text" placeholder="@lang('laralum_settings::general.author_ph')">
+                        <small class="uk-text-meta">@lang('laralum_settings::general.author_hp')</small>
+                    </div>
+                </div>
+
                 <div class="uk-margin uk-align-right">
                     <button type="submit" class="uk-button uk-button-primary">
                         <span class="ion-forward"></span>&nbsp; @lang('laralum_settings::general.save')
