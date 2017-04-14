@@ -22,7 +22,6 @@ class SettingsServiceProvider extends ServiceProvider
         }
 
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
-
     }
 
     /**
