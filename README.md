@@ -12,7 +12,7 @@
 
 ## Description
 
-This module allows to grant settings to each part of Laralum modules separately. Moreover you can create your own settings to manage easily users access to your website features.
+This module brings to you a configuration view to setup packages.
 
 ## Documentation
 
