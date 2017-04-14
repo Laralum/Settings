@@ -2,11 +2,11 @@
 
 namespace Laralum\Settings\Controllers;
 
-use Laralum\Settings\Models\Settings;
-use Laralum\Settings\Settings as Setts;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Laralum\Laralum\Packages;
+use Laralum\Settings\Models\Settings;
+use Laralum\Settings\Settings as Setts;
 
 class SettingsController extends Controller
 {
@@ -20,9 +20,9 @@ class SettingsController extends Controller
         $packages = Packages::all();
         $final_packages = [];
 
-        foreach( $packages as $package ) {
+        foreach ($packages as $package) {
             $sets = Setts::get($package);
-            if( $sets ) {
+            if ($sets) {
                 $final_packages[$package] = Setts::view($package);
             }
         }
@@ -34,22 +34,23 @@ class SettingsController extends Controller
      * Update the general settings.
      *
      * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
     {
         $this->validate($request, [
-            'appname' => 'required',
+            'appname'     => 'required',
             'description' => 'required',
-            'keywords' => 'required',
-            'author' => 'required',
+            'keywords'    => 'required',
+            'author'      => 'required',
         ]);
 
         Settings::first()->update([
-            'appname'   => $request->appname,
+            'appname'       => $request->appname,
             'description'   => $request->description,
-            'keywords'   => $request->keywords,
-            'author'   => $request->author,
+            'keywords'      => $request->keywords,
+            'author'        => $request->author,
         ]);
 
         return redirect()->route('laralum::settings.index', ['p' => 'Settings'])->with('success', __('laralum_settings::general.updated_settings'));

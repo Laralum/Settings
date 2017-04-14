@@ -8,6 +8,6 @@ class Settings extends Model
 {
     public $table = 'laralum_settings';
     public $fillable = [
-        'appname', 'description', 'keywords', 'author'
+        'appname', 'description', 'keywords', 'author',
     ];
 }

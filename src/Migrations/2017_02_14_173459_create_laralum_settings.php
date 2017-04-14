@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 use Laralum\Settings\Models\Settings;
 
 class CreateLaralumSettings extends Migration
@@ -24,10 +24,10 @@ class CreateLaralumSettings extends Migration
         });
 
         Settings::create([
-            'appname' => 'Laralum',
+            'appname'     => 'Laralum',
             'description' => 'The modular laravel administration panel',
-            'keywords' => 'Laralum,Admin,Panel,CMS,Laravel,Modern,Developers',
-            'author' => 'Erik Campobadal, Aitor Riba',
+            'keywords'    => 'Laralum,Admin,Panel,CMS,Laravel,Modern,Developers',
+            'author'      => 'Erik Campobadal, Aitor Riba',
         ]);
     }
 
