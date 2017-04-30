@@ -4,9 +4,9 @@ namespace Laralum\Settings;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
+use Laralum\Permissions\PermissionsChecker;
 use Laralum\Settings\Models\Settings;
 use Laralum\Settings\Policies\SettingsPolicy;
-use Laralum\Permissions\PermissionsChecker;
 
 class SettingsServiceProvider extends ServiceProvider
 {
@@ -40,7 +40,7 @@ class SettingsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-        
+
         $this->loadTranslationsFrom(__DIR__.'/Translations', 'laralum_settings');
 
         $this->loadViewsFrom(__DIR__.'/Views', 'laralum_settings');
@@ -50,7 +50,7 @@ class SettingsServiceProvider extends ServiceProvider
         }
 
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
-        
+
         // Make sure the permissions are OK
         PermissionsChecker::check($this->permissions);
     }

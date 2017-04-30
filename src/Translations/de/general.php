@@ -29,6 +29,6 @@ return [
     'author_hp'         => 'Die Meta-Autor / ren wird in der laralum Panel html verwendet werden.',
 
     'unauthorized_action'       => 'Unbefugte Handlung',
-    'unauthorized_desc'         => "Sie können die Benachrichtigungen nicht aktualisieren.",
-    'contact_webmaster'         => "Wenn du denkst, du solltest es in der Lage sein, es zu aktualisieren, bitte wenden Sie sich an webmaster.",
+    'unauthorized_desc'         => 'Sie können die Benachrichtigungen nicht aktualisieren.',
+    'contact_webmaster'         => 'Wenn du denkst, du solltest es in der Lage sein, es zu aktualisieren, bitte wenden Sie sich an webmaster.',
 ];
