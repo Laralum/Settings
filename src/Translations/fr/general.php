@@ -27,4 +27,8 @@ return [
     'author'            => 'Meta Author / s',
     'author_ph'         => 'Configurer la méta-auteur / s',
     'author_hp'         => 'La méta-auteur / s sera utilisée dans le panel de laralum html.',
+
+    'unauthorized_action'       => 'Action non autorisée',
+    'unauthorized_desc'         => "Vous n'êtes pas autorisé à mettre à jour les paramètres des notifications.",
+    'contact_webmaster'         => 'Si vous pensez pouvoir le mettre à jour, contactez le webmaster.',
 ];

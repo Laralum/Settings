@@ -39,6 +39,8 @@ class SettingsController extends Controller
      */
     public function update(Request $request)
     {
+        $this->authorize('update', Settings::class);
+
         $this->validate($request, [
             'appname'     => 'required',
             'description' => 'required',

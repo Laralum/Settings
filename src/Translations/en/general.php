@@ -27,4 +27,8 @@ return [
     'author'            => 'Meta Author/s',
     'author_ph'         => 'Setup the meta author/s',
     'author_hp'         => 'The meta author/s will be used in the laralum panel html.',
+
+    'unauthorized_action'       => 'Unauthorized Action',
+    'unauthorized_desc'         => "You're not allowed to update the notifications settings.",
+    'contact_webmaster'         => 'If you think you should be able to update it, please contact webmaster.',
 ];

@@ -11,6 +11,7 @@
 @section('content')
     @php
         $p = isset($_GET['p']) ? $_GET['p'] : 'Settings';
+        $p = strtolower($p);
     @endphp
     <div class="uk-container uk-container-large">
         <div uk-grid class="uk-grid-small">
@@ -22,7 +23,7 @@
                     <div class="uk-card-body">
                         <ul class="uk-tab-left" uk-tab="connect: #settings-content; media: ">
                             @foreach($packages as $package => $view)
-                                <li class="@if($package == $p) uk-active @endif">
+                                <li class="@if(strtolower($package) == $p) uk-active @endif">
                                     <a href="#{{ $package }}">
                                         {{ $package }}
                                     </a>

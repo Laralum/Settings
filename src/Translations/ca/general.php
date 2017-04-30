@@ -26,5 +26,9 @@ return [
     'keywords_hp'       => 'Les paraules clau meta seran utilitzats en el html panell de laralum.',
     'author'            => 'Meta Autor/s',
     'author_ph'         => "Configuració de l'autor/s meta",
-    'author_hp'         => "El porter autor/s s'utilitzarà en el panell d'html laralum.",
+    'author_hp'         => "El meta autor/s s'utilitzarà en el panell d'html de laralum.",
+
+    'unauthorized_action'       => 'Acció no autoritzada',
+    'unauthorized_desc'         => "No està autoritzat per actualitzar la configuració de notificacions.",
+    'contact_webmaster'         => "Si vostè creu que hauria de ser capaç d'actualitzar, si us plau, poseu-vos en contacte amb el webmaster.",
 ];
