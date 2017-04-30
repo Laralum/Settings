@@ -29,6 +29,6 @@ return [
     'author_hp'         => 'La meta autore/s sarà utilizzato nel codice HTML del pannello laralum.',
 
     'unauthorized_action'       => 'Azione non autorizzata',
-    'unauthorized_desc'         => 'Non puoi aggiornare le impostazioni delle notifiche.',
+    'unauthorized_desc'         => 'Non puoi aggiornare le impostazioni delle applicazione.',
     'contact_webmaster'         => 'Se pensi di potervi aggiornare, contatta il webmaster.',
 ];
