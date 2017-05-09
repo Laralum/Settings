@@ -16,7 +16,7 @@
     <div class="uk-container uk-container-large">
         <div uk-grid class="uk-grid-small">
             <div class="uk-width-1-1@s uk-width-2-5@m uk-width-1-3@l uk-width-1-5@xl">
-                <div class="uk-card uk-card-default" uk-sticky="media: 640; bottom: true; offset: 120;">
+                <div class="uk-card uk-card-default" uk-sticky="media: 640; offset: 120;">
                     <div class="uk-card-header">
                         @lang('laralum_settings::general.modules_available')
                     </div>
