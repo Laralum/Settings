@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laralum.com"><img height="150" src="https://avatars1.githubusercontent.com/u/22253051"></a></p>
+<p align="center"><a href="https://laralum.aitorriba.com"><img height="150" src="https://avatars1.githubusercontent.com/u/22253051"></a></p>
 
 <h1 align="center">Settings</h1>
 
@@ -17,7 +17,7 @@ This module brings to you a configuration view to setup packages.
 ## Documentation
 
 <p align="center">
-<a href="https://laralum.com/docs/settings"><img height="120" src="http://i.imgur.com/47WnADd.png"></a>
+<a href="https://laralum.aitorriba.com/docs/settings"><img height="120" src="http://i.imgur.com/47WnADd.png"></a>
 </p>
 
 
